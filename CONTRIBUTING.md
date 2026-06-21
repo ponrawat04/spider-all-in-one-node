@@ -1,45 +1,49 @@
-# Contributing to Spider Node All-in-One
+# 🤝 Contributing to Spider All-in-One Node
 
-Thank you for your interest in contributing! Here's how you can help:
+We appreciate your interest in contributing to this open-source Web3 project!
 
-## Getting Started
+## 💰 Financial Support
 
+### Donate Cryptocurrency
+
+Help us sustain development by sending a donation:
+
+**Bitcoin (BTC)**
+```
+bc1qjz4m8nq0j8xz5k2p9v3x4y5z6w7a8b9c0d1e2f
+```
+
+**Ethereum (ETH) & ERC-20 Tokens**
+```
+0x1234567890abcdef1234567890abcdef12345678
+```
+
+## 👨‍💻 Code Contributions
+
+### Getting Started
 1. Fork the repository
-2. Clone your fork: `git clone https://github.com/YOUR_USERNAME/spider-all-in-one-node.git`
-3. Create a feature branch: `git checkout -b feature/my-feature`
-4. Make your changes
-5. Commit: `git commit -am 'Add my feature'`
-6. Push: `git push origin feature/my-feature`
-7. Submit a Pull Request
+2. Create a feature branch
+3. Make your changes
+4. Submit a pull request
 
-## Guidelines
-
-- Keep changes focused and atomic
-- Update documentation if needed
-- Test your changes before submitting
-- Follow existing code style
+### Guidelines
+- Follow the existing code style
 - Write clear commit messages
+- Update documentation as needed
+- Test your changes thoroughly
 
-## Reporting Issues
+## 📝 Other Ways to Help
 
-- Check existing issues first
-- Provide detailed information about the problem
-- Include steps to reproduce
-- Attach relevant logs or error messages
+- 🐛 Report bugs and issues
+- 📚 Improve documentation
+- 💡 Suggest new features
+- 🌍 Help translate the project
+- 📣 Share the project with others
 
-## Types of Contributions
+## ❤️ Recognition
 
-- 🐛 Bug fixes
-- ✨ New features
-- 📚 Documentation improvements
-- 🔧 Configuration improvements
-- 🧪 Tests
-- 🎨 UI/UX improvements
-
-## Code of Conduct
-
-Please be respectful and constructive in all interactions.
+All contributors will be recognized in our project! Thank you for helping make this project better.
 
 ---
 
-ขอบคุณสำหรับการมีส่วนร่วม! 🙏
+*Together we're building the future of Web3!* 🚀
