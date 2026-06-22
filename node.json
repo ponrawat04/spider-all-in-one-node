@@ -1,0 +1,55 @@
+{
+  "node_id": "auto-sec-placeholder",
+  "owner": "ponrawat04",
+  "consensus_mode": "Proof-of-Venom",
+  "network_name": "Spider Web3 Mainnet",
+  "version": "1.0.0",
+  "p2p": {
+    "port": 4001,
+    "protocol": "libp2p",
+    "max_peers": 100
+  },
+  "rpc": {
+    "port": 3000,
+    "host": "0.0.0.0",
+    "enable_cors": true,
+    "timeout_ms": 30000
+  },
+  "storage": {
+    "ipfs_repo_path": "/data/ipfs",
+    "config_path": "/config",
+    "logs_path": "/logs",
+    "db_type": "leveldb"
+  },
+  "bootstrap_peers": [
+    "/dnsaddr/bootstrap.spider-web3.net/p2p/QmSpiderBootstrapX1",
+    "/dnsaddr/bootstrap.spider-web3.net/p2p/QmSpiderBootstrapX2",
+    "/dnsaddr/bootstrap.spider-web3.net/p2p/QmSpiderBootstrapX3"
+  ],
+  "validator": {
+    "enabled": true,
+    "stake_amount": "1000000000000000000",
+    "commission_rate": 0.1
+  },
+  "sync": {
+    "mode": "full",
+    "checkpoint_sync": true,
+    "peers_sync": 5
+  },
+  "logging": {
+    "level": "info",
+    "format": "json",
+    "file_rotation": {
+      "enabled": true,
+      "max_size_mb": 100,
+      "max_files": 10
+    }
+  },
+  "security": {
+    "tls_enabled": false,
+    "rate_limiting": {
+      "enabled": true,
+      "requests_per_second": 100
+    }
+  }
+}
