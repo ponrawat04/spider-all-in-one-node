@@ -1,189 +1,74 @@
-# 🕷️ Spider All-in-One Node
+# spider-all-in-one-node
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![GitHub Stars](https://img.shields.io/github/stars/ponrawat04/spider-all-in-one-node?style=social)](https://github.com/ponrawat04/spider-all-in-one-node)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![GitHub Stars](https://img.shields.io/github/stars/ponrawat04/spider-all-in-one-node?style=social)](https://github.com/ponrawat04/spider-all-in-one-node/stargazers)
 [![GitHub Issues](https://img.shields.io/github/issues/ponrawat04/spider-all-in-one-node)](https://github.com/ponrawat04/spider-all-in-one-node/issues)
+[![CI](https://github.com/ponrawat04/spider-all-in-one-node/actions/workflows/ci.yml/badge.svg)](https://github.com/ponrawat04/spider-all-in-one-node/actions/workflows/ci.yml)
 
-> A comprehensive Web3 toolkit that brings all essential blockchain tools together in one place.
+สรุปสั้น ๆ (ไทย):
 
-## 🌟 Features
+โปรเจกต์ "spider-all-in-one-node" เป็นชุดเครื่องมือแบบครบวงจรสำหรับงานเว็บ3 (Web3) — เช่น การเก็บข้อมูล (crawler/spider), การเชื่อมต่อกับ Node ของบล็อกเชน และตัวอย่างการใช้งานเบื้องต้น
 
-- **🔗 Multi-Chain Support** - Work with multiple blockchains seamlessly
-- **💰 Web3 Tools** - Complete set of Web3 development utilities
-- **🐳 Docker Integration** - Easy deployment with Docker & Docker Compose
-- **⚙️ Auto Configuration** - Automated setup with sensible defaults
-- **📊 Real-time Monitoring** - Monitor your nodes and transactions
-- **🔐 Security First** - Built-in security best practices
-- **🌍 P2P Network** - Full peer-to-peer network support
-- **📱 API Ready** - RESTful API for easy integration
+Summary (English):
 
-## 🚀 Quick Start
+All-in-one Web3 spider/crawler tools and examples for Node.js and shell-based integrations.
 
-### Prerequisites
-- Docker 20.10+
-- Docker Compose 1.29+
-- 2GB RAM minimum
-- Internet connection
+เหตุผลที่ควรสนใจ:
+- ตัวอย่างวิธีเชื่อมต่อกับ Node/Provider
+- มีสคริปต์ตัวอย่างเพื่อดึงข้อมูลจาก chain และ marketplace
+- เริ่มต้นได้ง่ายและปรับแต่งได้ตามต้องการ
 
-### Installation (Automated)
+Quick Start
+
+1) Clone โปรเจกต์
 
 ```bash
-# Clone the repository
 git clone https://github.com/ponrawat04/spider-all-in-one-node.git
 cd spider-all-in-one-node
+```
 
-# Run the installer
+2) ติดตั้ง (ถ้ามี Node.js project)
+
+```bash
+# ถ้ามี package.json
+npm install
+```
+
+3) ตัวอย่างการรัน (shell script)
+
+```bash
+# ถ้ามีสคริปต์ติดตั้ง/รัน
 chmod +x install.sh
 ./install.sh
+# หรือ
+bash ./scripts/start.sh
 ```
 
-### Manual Installation
+การกำหนดค่า (Configuration)
+
+คัดลอกไฟล์ตัวอย่าง .env และแก้ค่าตามความต้องการ
 
 ```bash
-# Copy environment template
 cp .env.example .env
-
-# Start services
-docker-compose up -d
-
-# View logs
-docker-compose logs -f
 ```
 
-## 📋 Configuration
+Suggested topics (เพิ่มในหน้า GitHub Topics): web3, blockchain, nodejs, crawler, spider, nft, smart-contracts
 
-Edit `.env` file to customize:
+Contributing
 
-```bash
-# Node Configuration
-NODE_ROLE=validator          # validator, archive, light
-P2P_BOOTSTRAP=/dnsaddr/...  # Bootstrap node address
+อ่าน CONTRIBUTING.md เพื่อรู้วิธีร่วมพัฒนา โปรดสร้าง issue ก่อนส่ง pull request ถ้าต้องการเปลี่ยนแปลงใหญ่
 
-# Port Configuration
-HTTP_PORT=3000              # HTTP API port
-P2P_PORT=4001               # P2P network port
+License
 
-# Data Directory
-DATA_DIR=./spider_data       # Local data storage path
-```
+MIT — ดูไฟล์ LICENSE
 
-## 🎯 Usage
+Links
 
-### Check Node Status
-```bash
-docker-compose ps
-docker-compose logs -f
-```
-
-### Interact with Node
-```bash
-# HTTP API
-curl http://localhost:3000/api/status
-
-# Web3 JSON-RPC (if enabled)
-curl -X POST http://localhost:3000 \
-  -H "Content-Type: application/json" \
-  -d '{"jsonrpc":"2.0","method":"eth_blockNumber","params":[],"id":1}'
-```
-
-### Manage Services
-```bash
-# Start
-docker-compose up -d
-
-# Stop
-docker-compose down
-
-# Restart
-docker-compose restart
-
-# View logs
-docker-compose logs -f [service-name]
-```
-
-## 🛠️ Development
-
-### Project Structure
-```
-spider-all-in-one-node/
-├── install.sh              # Installation script
-├── docker-compose.yml      # Docker Compose configuration
-├── .env.example            # Environment template
-├── README.md               # This file
-├── CONTRIBUTING.md         # Contribution guidelines
-├── DONATION.md             # Support the project
-└── tests/                  # Test files
-```
-
-### Building from Source
-
-```bash
-# Install dependencies
-npm install
-
-# Build
-npm run build
-
-# Test
-npm test
-
-# Run locally
-npm start
-```
-
-## 📚 Documentation
-
-- [Installation Guide](./docs/INSTALLATION.md)
-- [Configuration Guide](./docs/CONFIG.md)
-- [API Reference](./docs/API.md)
-- [Contributing Guide](./CONTRIBUTING.md)
-
-## 💰 Support
-
-This project is maintained by volunteers. Please consider supporting our development:
-
-### Donate Cryptocurrency
-
-**Bitcoin (BTC)**
-```
-bc1qjz4m8nq0j8xz5k2p9v3x4y5z6w7a8b9c0d1e2f
-```
-
-**Ethereum (ETH) & ERC-20 Tokens**
-```
-0x1234567890abcdef1234567890abcdef12345678
-```
-
-👉 See [DONATION.md](./DONATION.md) for more donation options.
-
-## 🤝 Contributing
-
-We welcome contributions! Please see [CONTRIBUTING.md](./CONTRIBUTING.md) for details on:
-- How to submit issues
-- How to submit pull requests
-- Code style guidelines
-- Development setup
-
-## 📄 License
-
-This project is licensed under the MIT License - see [LICENSE](./LICENSE) file for details.
-
-## ⚠️ Disclaimer
-
-This software is provided "as-is" without warranty. Use at your own risk. Always test thoroughly in a non-production environment first.
-
-## 🔗 Links
-
-- **GitHub**: https://github.com/ponrawat04/spider-all-in-one-node
-- **Issues**: https://github.com/ponrawat04/spider-all-in-one-node/issues
-- **Discussions**: https://github.com/ponrawat04/spider-all-in-one-node/discussions
-
-## 👨‍💻 Author
-
-**Ponrawat** - [@ponrawat04](https://github.com/ponrawat04)
+- Repository: https://github.com/ponrawat04/spider-all-in-one-node
+- Demo / Homepage: https://ai.studio/apps/6414f1fe-2f41-472c-9402-65a0fc5f9d1d
 
 ---
 
-**Made with ❤️ for the Web3 community**
+Made with ❤️ for the Web3 community
 
-⭐ If you find this useful, please give it a star!
+If this helped you, please star ⭐ the repo!
